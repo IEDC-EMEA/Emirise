@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Sparkles, Calendar, Clock3, Timer, PartyPopper } from 'lucide-react';
 
 function App() {
   const [days, setDays] = useState(0);
@@ -28,81 +29,84 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-blue-950 relative overflow-hidden flex flex-col items-center justify-center text-white p-4">
-      {/* Web pattern background */}
-      <div className="absolute inset-0 opacity-10">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="absolute w-full h-full border-2 border-red-600 rounded-full"
-               style={{
-                 transform: `scale(${1 + i * 0.2}) rotate(${i * 45}deg)`,
-                 opacity: 1 - i * 0.2
-               }}
-          />
+    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-fuchsia-900 relative overflow-hidden flex flex-col items-center justify-center text-white p-4">
+      {/* Animated background particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${5 + Math.random() * 10}s`
+            }}
+          >
+            <Sparkles className="text-amber-300/20 w-4 h-4" />
+          </div>
         ))}
       </div>
 
-      <div className="relative z-10 text-center space-y-8 w-full max-w-4xl">
+      <div className="relative z-10 text-center space-y-12 w-full max-w-4xl">
         {/* Main Title */}
-        <div className="bg-gradient-to-r from-red-600 via-red-500 to-red-600 p-1 rounded-lg shadow-lg animate-pulse">
-          <div className="bg-blue-950 rounded-lg px-8 py-6">
-            <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-red-500 to-red-600 text-transparent bg-clip-text">
-              EMIRISE
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-light mt-2 text-white">
-              EMEA College Management Fest 2K24
-            </h2>
-          </div>
-        </div>
-
-        {/* Countdown Timer */}
-        <div className="bg-gradient-to-r from-red-600 via-red-500 to-red-600 p-1 rounded-xl shadow-lg">
-          <div className="bg-blue-950 rounded-lg p-6 md:p-8">
-            <p className="text-xl mb-6">Your Friendly Neighborhood Management Fest is Coming Soon...</p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { value: days, label: "Days" },
-                { value: hours, label: "Hours" },
-                { value: minutes, label: "Minutes" },
-                { value: seconds, label: "Seconds" }
-              ].map((item, index) => (
-                <div key={index} className="relative group">
-                  <div className="absolute inset-0 bg-red-500 rounded-lg blur opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                  <div className="relative bg-blue-900 rounded-lg p-4 border border-red-500/20">
-                    <div className="text-4xl font-bold text-red-500">{item.value}</div>
-                    <div className="text-sm text-gray-300">{item.label}</div>
-                  </div>
-                </div>
-              ))}
+        <div className="transform hover:scale-105 transition-transform duration-300">
+          <div className="bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 p-1 rounded-2xl shadow-lg">
+            <div className="bg-gradient-to-b from-indigo-950 to-purple-900 rounded-xl px-8 py-6 backdrop-blur-lg">
+              <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 text-transparent bg-clip-text animate-shimmer">
+                EMIRISE
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-light mt-4 text-gray-200">
+                EMEA College Management Fest 2K25
+              </h2>
             </div>
           </div>
         </div>
 
-        {/* Spider Symbol */}
-        <div className="mt-8 animate-bounce">
-          <div className="w-16 h-16 mx-auto relative">
-            <svg 
-              viewBox="0 0 24 24" 
-              className="w-16 h-16 text-red-500"
-              fill="currentColor"
-            >
-              <path d="M16.5 2.25C14.75 2.25 12.5 3 12 3.25C11.5 3 9.25 2.25 7.5 2.25C4.25 2.25 1.5 4.75 1.5 8.25C1.5 11.5 3.75 13.75 7.25 17.25C9.25 19.25 11.25 21.25 11.75 21.75C11.875 21.875 12.125 21.875 12.25 21.75C12.75 21.25 14.75 19.25 16.75 17.25C20.25 13.75 22.5 11.5 22.5 8.25C22.5 4.75 19.75 2.25 16.5 2.25Z" />
-            </svg>
-            <div className="absolute inset-0 bg-red-500/20 rounded-full animate-ping"></div>
+        {/* Countdown Timer */}
+        <div className="space-y-8">
+          <p className="text-xl font-light flex items-center justify-center gap-2">
+            <PartyPopper className="w-6 h-6 text-amber-300 animate-bounce" />
+            <span>Your Friendly Neighborhood Management Fest is Coming Soon...</span>
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { value: days, label: "Days", icon: Calendar },
+              { value: hours, label: "Hours", icon: Clock3 },
+              { value: minutes, label: "Minutes", icon: Timer },
+              { value: seconds, label: "Seconds", icon: Timer }
+            ].map((item, index) => (
+              <div key={index} className="group">
+                <div className="relative transform hover:scale-105 transition-all duration-300">
+                  <div className="absolute inset-0 bg-pink-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-30"></div>
+                  <div className="relative bg-gradient-to-b from-purple-900/80 to-indigo-950/80 rounded-xl p-6 border border-pink-500/20 backdrop-blur-sm">
+                    <item.icon className="w-6 h-6 text-amber-300 mx-auto mb-2" />
+                    <div className="text-4xl font-bold text-amber-300 group-hover:text-amber-200 transition-colors">
+                      {String(item.value).padStart(2, '0')}
+                    </div>
+                    <div className="text-sm text-gray-300 font-light">{item.label}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <p className="text-lg text-gray-300">
-          Get ready for an experience that will stick with you!
-        </p>
+        {/* Footer */}
+        <div className="mt-12">
+          <p className="text-lg text-gray-300 font-light italic">
+            "Get ready for an experience that will stick with you!"
+          </p>
+        </div>
       </div>
 
-      {/* Corner Webs */}
+      {/* Decorative corners */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-24 h-24 border-t-4 border-l-4 border-red-600/30"></div>
-        <div className="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-red-600/30"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 border-b-4 border-l-4 border-red-600/30"></div>
-        <div className="absolute bottom-0 right-0 w-24 h-24 border-b-4 border-r-4 border-red-600/30"></div>
+        <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-amber-300/20 rounded-tl-3xl"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-amber-300/20 rounded-tr-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-amber-300/20 rounded-bl-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-amber-300/20 rounded-br-3xl"></div>
       </div>
     </div>
   );
