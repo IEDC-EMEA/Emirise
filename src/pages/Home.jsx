@@ -87,7 +87,7 @@ const Home = () => {
 
             <AnimatedSection className="pt-24  backdrop-blur-lg" >
                 {/* Events Section */}
-                <section className="py-20 px-4" id="events">
+                <section className="pb-20 px-4" id="events">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-red-200 to-white">
                             Events
