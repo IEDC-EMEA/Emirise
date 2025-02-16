@@ -19,7 +19,7 @@ function Home() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-red-900/70 z-0"></div>
                 <div className="relative z-10 max-w-4xl mx-auto">
                     <div className="mb-8">
-                        <img src={Logo} alt="EMIRISE" className="h-28 mx-auto" />
+                        <img src={Logo} alt="EMIRISE" className="h-24 sm:h-28 mx-auto" />
                     </div>
                     <h1 className="text-4xl md:text-7xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-200 to-white">EMIRISE 2K25</h1>
                     <p className="text-xl max-w-[360px] sm:max-w-full text-center mx-auto sm:text-2xl mb-8 text-red-100">Innovating the Future: Exploring the Power of Knowledge and Entrepreneurship</p>
