@@ -41,4 +41,36 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-gradient-text {
+  animation: gradient-text 3s ease infinite;
+}
+@keyframes gradient-xy {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-text {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.footer-shadow {
+  box-shadow: 0px -50px 30px rgba(0, 0, 0, 0.733);
+}
+
 
