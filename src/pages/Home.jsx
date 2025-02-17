@@ -64,23 +64,15 @@ const Home = () => {
 
                     <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
                         <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdMa02fYoukATqTYKI-NILCzaXpWYp8wjy5E0cfGYRAh8TgoA/viewform"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScRdlCROl46mrMX7YfUuTv2uOZ0NOHtVY9SCPUQOelOB9w9yQ/viewform"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
                         >
-                            Register for Events
+                            Register Now
                             <ArrowRight className="ml-2" />
                         </a>
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScRdlCROl46mrMX7YfUuTv2uOZ0NOHtVY9SCPUQOelOB9w9yQ/viewform"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center bg-white/15 hover:bg-white/25 backdrop-blur-md text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
-                        >
-                            <Award className="mr-2" />
-                            Student Entrepreneurs
-                        </a>
+                        
                     </div>
                 </div>
             </header>
