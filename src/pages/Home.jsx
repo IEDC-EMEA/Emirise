@@ -1,11 +1,11 @@
 import React from 'react';
 import { Calendar, MapPin, Phone, Award, User, ArrowRight, ExternalLink } from 'lucide-react';
-import { Card, CardHeader, CardContent } from '../components/card';
+import { Card, CardHeader, CardContent , CardFooter } from '../components/card';
 import BackgroundImage from '../assets/hero.png';
 import BackgroundImageRespo from '../assets/hero_responsive.png';
 import Logo from '../assets/logo.svg';
 import CountdownTimer from '../components/CountdownTimer/CountdownTimer';
-
+import Button from '../components/Button';
 
 const AnimatedSection = ({ className = '', children }) => {
     return (
@@ -72,7 +72,7 @@ const Home = () => {
                             Register Now
                             <ArrowRight className="ml-2" />
                         </a>
-                        
+
                     </div>
                 </div>
             </header>
@@ -93,7 +93,8 @@ const Home = () => {
                                         { name: "Sinan", phone: "9061034005" },
                                         { name: "Mehrin", phone: "9880021044" }
                                     ],
-                                    prizepool: "₹17,000"
+                                    prizepool: "₹17,000",
+                                    link: "https://tinyurl.com/emirise-ideathon"
                                 },
                                 {
                                     title: "BIZ QUIZ",
@@ -102,7 +103,8 @@ const Home = () => {
                                         { name: "Rashid", phone: "7736715006" },
                                         { name: "Rizwan", phone: "7025872660" }
                                     ],
-                                    prizepool: "₹8,000"
+                                    prizepool: "₹8,000",
+                                    link: "https://tinyurl.com/emirise-bizquiz"
                                 },
                                 {
                                     title: "TREASURE HUNT",
@@ -111,7 +113,8 @@ const Home = () => {
                                         { name: "Fabin", phone: "62358 22330" },
                                         { name: "Salman", phone: "9526855307" }
                                     ],
-                                    prizepool: "₹11,000"
+                                    prizepool: "₹11,000",
+                                    link: "https://tinyurl.com/emirise-treasurehunt"
                                 }
                             ].map((event, index) => (
                                 <Card key={index} className="bg-white/5 backdrop-blur-md border-0 hover:bg-white/10 transition-all transform hover:scale-105">
@@ -136,6 +139,15 @@ const Home = () => {
                                             ))}
                                         </div>
                                     </CardContent>
+                                    <CardFooter className="flex justify-center pt-4">
+                                        <Button
+                                            onClick={() => window.open(event.link, '_blank')}
+                                            className="bg-red-500 hover:bg-red-600 text-white flex items-center gap-2 cursor-pointer"
+                                        >
+                                            Register Now
+                                            <ExternalLink size={16} />
+                                        </Button>
+                                    </CardFooter>
                                 </Card>
                             ))}
                         </div>
