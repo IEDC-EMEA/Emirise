@@ -137,26 +137,36 @@ const Event = () => {
       {certificateReady && selectedStudent && (
         <div className="certificate-container max-w-4xl mx-auto mt-8 bg-gray-900 rounded-lg p-6 mb-10">
           <div className='flex justify-between items-center mb-6'>
-          <h2 className="text-xl font-semibold mb-4">Certificate Preview</h2>
-          <button
-            onClick={() => setCertificateReady(false)}
-            className="px-4 py-2 bg-red-700 hover:bg-red-600 rounded transition-colors cursor-pointer"
-          >
-            Close Preview
-          </button>
+            <h2 className="text-xl font-semibold mb-4">Certificate Preview</h2>
+            <button
+              onClick={() => setCertificateReady(false)}
+              className="px-4 py-2 bg-red-700 hover:bg-red-600 rounded transition-colors cursor-pointer"
+            >
+              Close Preview
+            </button>
           </div>
-          <div className="relative mb-4 min-h-[300px]" style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <div className="relative mb-4 " style={{ maxWidth: '600px', margin: '0 auto' }}>
             <img
               src={events.find(event => event.id === selectedEvent).certificateTemplate}
               alt="Certificate Template"
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 mt-8 flex flex-col items-center justify-center">
-              <div className="text-center">
-                <p className="text-md font-semibold" style={{ color: '#000000' }}>{selectedStudent.name}</p>
+            {/* Name placement */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className="text-center absolute w-full whitespace-nowrap overflow-hidden text-[5px] sm:text-[10px] md:text-[14px] "
+                style={{
+                  top: '54%', // Adjust based on certificate design
+                  transform: 'translateY(-50%)',
+                  fontWeight: 'bold',
+                  color: '#000000',
+                }}
+              >
+                {selectedStudent.name}
               </div>
             </div>
           </div>
+
           <div className="text-center mt-4">
             <button
               className="px-6 py-3 bg-red-700 hover:bg-red-600 rounded font-semibold transition-colors cursor-pointer"
@@ -177,16 +187,18 @@ const Event = () => {
             {filteredStudents.length > 0 ? (
               <ul className="divide-y divide-gray-700" ref={parent}>
                 {filteredStudents.map(student => (
-                  <li key={student.id} className="py-3 flex justify-between items-center">
+                  <li key={student.id} className="py-3 flex justify-between items-center flex-wrap">
                     <div>
                       <p className="text-lg font-medium">{student.name}</p>
                     </div>
-                    <button
-                      className="px-4 py-2 bg-red-700 hover:bg-red-600 rounded transition-colors"
-                      onClick={() => generateCertificate(student)}
-                    >
-                      Show Certificate
-                    </button>
+                    <div className='flex items-end justify-end w-full'>
+                      <button
+                        className="px-4 py-1 sm:py-2 bg-red-700 hover:bg-red-600 rounded transition-colors"
+                        onClick={() => generateCertificate(student)}
+                      >
+                        Show Certificate
+                      </button>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -197,9 +209,9 @@ const Event = () => {
         </div>
       )}
 
-              <p className='text-center mt-4 flex-1 flex justify-center items-end'>
-                &copy; IEDC Tech Team 2k25
-              </p>
+      <p className='text-center mt-4 flex-1 flex justify-center items-end'>
+        &copy; IEDC Tech Team 2k25
+      </p>
     </div>
   );
 };
