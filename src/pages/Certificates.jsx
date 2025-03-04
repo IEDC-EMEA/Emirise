@@ -86,7 +86,7 @@ const Event = () => {
       { id: 1, name: 'MUHAMMED RASHID' },
       { id: 2, name: 'RIZWAN' }
     ],
-    'ideathon': {
+    'Ideathon': {
       participation_certificate: [
         { id: 1, name: 'ABHAY DILEEP' },
         { id: 2, name: 'MUHAMMED SAKKARIYA K' },
