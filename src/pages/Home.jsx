@@ -1,11 +1,12 @@
 import React from 'react';
 import { Calendar, MapPin, Phone, Award, User, ArrowRight, ExternalLink } from 'lucide-react';
-import { Card, CardHeader, CardContent , CardFooter } from '../components/card';
+import { Card, CardHeader, CardContent, CardFooter } from '../components/card';
 import BackgroundImage from '../assets/hero.png';
 import BackgroundImageRespo from '../assets/hero_responsive.png';
 import Logo from '../assets/logo.svg';
 import CountdownTimer from '../components/CountdownTimer/CountdownTimer';
 import Button from '../components/Button';
+import { useNavigate } from 'react-router-dom';
 
 const AnimatedSection = ({ className = '', children }) => {
     return (
@@ -22,6 +23,9 @@ const AnimatedSection = ({ className = '', children }) => {
 
 
 const Home = () => {
+    const navigate = useNavigate();
+
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-red-950 via-red-900 to-gray-900 text-white">
             {/* Hero Section */}
@@ -63,15 +67,24 @@ const Home = () => {
                     <CountdownTimer />
 
                     <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-                        <a
+                        <button
                             href="https://docs.google.com/forms/d/e/1FAIpQLScRdlCROl46mrMX7YfUuTv2uOZ0NOHtVY9SCPUQOelOB9w9yQ/viewform"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
+                            disabled={true}
+                            className="inline-flex items-center bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition-all transform  disabled:bg-red-800 disabled:cursor-not-allowed "
                         >
-                            Register Now
+                            Register Closed
+                            {/* <ArrowRight className="ml-2" /> */}
+                        </button>
+                        <button
+                            onClick={() => navigate('/certificates')}
+                            className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg cursor-pointer"
+                        >
+                            Claim your certificate
                             <ArrowRight className="ml-2" />
-                        </a>
+                        </button>
+
 
                     </div>
                 </div>
@@ -141,12 +154,14 @@ const Home = () => {
                                     </CardContent>
                                     <CardFooter className="flex justify-center pt-4">
                                         <Button
-                                            onClick={() => window.open(event.link, '_blank')}
+                                            // onClick={() => window.open(event.link, '_blank')}
+                                            disabled={true}
                                             className="bg-red-500 hover:bg-red-600 text-white flex items-center gap-2 cursor-pointer"
                                         >
-                                            Register Now
-                                            <ExternalLink size={16} />
+                                            Register closed
+                                            {/* <ExternalLink size={16} /> */}
                                         </Button>
+
                                     </CardFooter>
                                 </Card>
                             ))}
