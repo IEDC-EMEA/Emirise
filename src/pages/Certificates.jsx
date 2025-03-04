@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Certificate_TreasureHunt from '../assets/Certificate_treasureHunt.jpg';
-import Certificate_BizQuiz from '../assets/Certificate_treasureHunt.jpg';
+import Certificate_BizQuiz from '../assets/Certificate_Bizquiz.jpg';
+import Certificate_Ideathon from '../assets/Certificate_Ideathon.jpg';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 
@@ -16,7 +17,7 @@ const Event = () => {
   const events = [
     { id: 'treasure-hunt', name: 'Treasure Hunt', certificateTemplate: Certificate_TreasureHunt },
     { id: 'biz-quiz', name: 'Biz Quiz', certificateTemplate: Certificate_BizQuiz },
-    { id: 'Ideathon', name: 'Ideathon', certificateTemplate: Certificate_BizQuiz }
+    { id: 'Ideathon', name: 'Ideathon', certificateTemplate: Certificate_Ideathon }
   ];
 
   const studentsData = {
