@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Certificate_TreasureHunt from '../assets/Certificate_treasureHunt.jpg';
-import Certificate_BizQuiz from '../assets/Certificate_Bizquiz.jpg';
-import Certificate_Ideathon from '../assets/Certificate_Ideathon.jpg';
+import Certificate_TreasureHunt from '../assets/Certificate_treasureHunt.webp';
+import Certificate_BizQuiz from '../assets/Certificate_Bizquiz.webp';
+import Certificate_Ideathon from '../assets/Certificate_Ideathon.webp';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 
@@ -26,16 +26,87 @@ const Event = () => {
       { id: 2, name: 'AMJAD PA' },
       { id: 3, name: 'SHAHEEN C' },
       { id: 4, name: 'FATHIMA JANNAH' },
+      { id: 5, name: 'SANOOP KRISHNAN KP' },
+      { id: 6, name: 'ALI AMAN T' },
+      { id: 7, name: 'RANJITH RAJ AP' },
+      { id: 8, name: 'SALIK ROSHAN' },
+      { id: 9, name: 'AKASH P' },
+      { id: 10, name: 'NAVANEETH M' },
+      { id: 11, name: 'PRANAV M' },
+      { id: 12, name: 'ASHWAS EMMANUEL K' },
+      { id: 13, name: 'AMEEQ' },
+      { id: 14, name: 'SAFWAN' },
+      { id: 15, name: 'SHAHAS' },
+      { id: 16, name: 'MUHSIN' },
+      { id: 17, name: 'SINAN SABIC' },
+      { id: 18, name: 'MUHAMMED IYAS' },
+      { id: 19, name: 'AMEEN BADUSHA' },
+      { id: 20, name: 'ZAYID SHIHAB THANGAL' },
+      { id: 21, name: 'IBRAHIM BADUSHA' },
+      { id: 22, name: 'RIFAN' },
+      { id: 23, name: 'SALAH' },
+      { id: 24, name: 'SAVAD' },
+      { id: 25, name: 'ABDUL MUHSIN PK' },
+      { id: 26, name: 'SHAMMAS MUHAMMED PP' },
+      { id: 27, name: 'MUHAMMED SAHEER' },
+      { id: 28, name: 'NIHAD PT' },
+      { id: 29, name: 'MUHAMMED SABEEL KT' },
+      { id: 30, name: 'SIBNA SHERIN T' },
+      { id: 31, name: 'MISHARI V' },
+      { id: 32, name: 'GAYATHRI P' },
+      { id: 33, name: 'MEHABOOB AK' },
+      { id: 34, name: 'AMEEN AHSAN' },
+      { id: 35, name: 'MIDLAL PP' },
+      { id: 36, name: 'ANSAF P' },
+      { id: 37, name: 'MUHAMMED NISHAD' },
+      { id: 38, name: 'FIDHIN P' },
+      { id: 39, name: 'AYSHA NIHMA' },
+      { id: 40, name: 'MUHAMMED MAZIN EV' },
+      { id: 41, name: 'MOHAMMED SANAD' },
+      { id: 42, name: 'ANSHIF' },
+      { id: 43, name: 'PRANAV' },
+      { id: 44, name: 'FADIL' },
+      { id: 45, name: 'DHIYAN' },
+      { id: 46, name: 'RISHAL' },
+      { id: 47, name: 'SWALIH P' },
+      { id: 48, name: 'NIDA T' },
+      { id: 49, name: 'SHIFANA SHERI C' },
+      { id: 50, name: 'MUNSHIDA C' },
+      { id: 51, name: 'VININ P' },
+      { id: 52, name: 'SHANIBA SHERIN MK' },
+      { id: 53, name: 'SHAHMA V' },
+      { id: 54, name: 'RISHAN P' },
+      { id: 55, name: 'JUNAID T' },
+      { id: 56, name: 'RIDHA SHERIN P' },
+      { id: 57, name: 'SHAMNA KK' },
+      { id: 58, name: 'ADIP PT' },
+      { id: 59, name: 'NIHAL NESRUDHEEN' }
     ],
     'biz-quiz': [
       { id: 1, name: 'MUHAMMED RASHID' },
-      { id: 2, name: 'RIZWAN' },
+      { id: 2, name: 'RIZWAN' }
     ],
-    'Ideathon': [
-      { id: 1, name: 'MUHAMMED SINAN' },
-      { id: 2, name: 'MEHRIN' },
-    ],
+    'ideathon': {
+      participation_certificate: [
+        { id: 1, name: 'ABHAY DILEEP' },
+        { id: 2, name: 'MUHAMMED SAKKARIYA K' },
+        { id: 3, name: 'HIBA FARHA K T' },
+        { id: 4, name: 'SHAMILA FIDHA K' },
+        { id: 5, name: 'LIYANA SIDHEEQ' },
+        { id: 6, name: 'AMNA NOURIN T' },
+        { id: 7, name: 'DIYA FATHIMA PV' },
+        { id: 8, name: 'ABRAAR ALI E' },
+        { id: 9, name: 'FATHIMA SHIFA' },
+        { id: 10, name: 'FATHIMA SHIYA' },
+        { id: 11, name: 'AYESHA RIDHA' },
+        { id: 12, name: 'FATHIMA NADHA KT' },
+        { id: 13, name: 'NOFA PV' },
+        { id: 14, name: 'FATHIMA MIDHA' },
+        { id: 15, name: 'MUHAMMED HARSHAD' }
+      ]
+    }
   };
+  
 
 
   // Update filtered students when event changes or search term changes
