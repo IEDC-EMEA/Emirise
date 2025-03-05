@@ -86,27 +86,25 @@ const Event = () => {
       { id: 1, name: 'MUHAMMED RASHID' },
       { id: 2, name: 'RIZWAN' }
     ],
-    'Ideathon': {
-      participation_certificate: [
-        { id: 1, name: 'ABHAY DILEEP' },
-        { id: 2, name: 'MUHAMMED SAKKARIYA K' },
-        { id: 3, name: 'HIBA FARHA K T' },
-        { id: 4, name: 'SHAMILA FIDHA K' },
-        { id: 5, name: 'LIYANA SIDHEEQ' },
-        { id: 6, name: 'AMNA NOURIN T' },
-        { id: 7, name: 'DIYA FATHIMA PV' },
-        { id: 8, name: 'ABRAAR ALI E' },
-        { id: 9, name: 'FATHIMA SHIFA' },
-        { id: 10, name: 'FATHIMA SHIYA' },
-        { id: 11, name: 'AYESHA RIDHA' },
-        { id: 12, name: 'FATHIMA NADHA KT' },
-        { id: 13, name: 'NOFA PV' },
-        { id: 14, name: 'FATHIMA MIDHA' },
-        { id: 15, name: 'MUHAMMED HARSHAD' }
-      ]
-    }
+    'Ideathon': [
+      { id: 1, name: 'ABHAY DILEEP' },
+      { id: 2, name: 'MUHAMMED SAKKARIYA K' },
+      { id: 3, name: 'HIBA FARHA K T' },
+      { id: 4, name: 'SHAMILA FIDHA K' },
+      { id: 5, name: 'LIYANA SIDHEEQ' },
+      { id: 6, name: 'AMNA NOURIN T' },
+      { id: 7, name: 'DIYA FATHIMA PV' },
+      { id: 8, name: 'ABRAAR ALI E' },
+      { id: 9, name: 'FATHIMA SHIFA' },
+      { id: 10, name: 'FATHIMA SHIYA' },
+      { id: 11, name: 'AYESHA RIDHA' },
+      { id: 12, name: 'FATHIMA NADHA KT' },
+      { id: 13, name: 'NOFA PV' },
+      { id: 14, name: 'FATHIMA MIDHA' },
+      { id: 15, name: 'MUHAMMED HARSHAD' }
+    ]
   };
-  
+
 
 
   // Update filtered students when event changes or search term changes
