@@ -148,8 +148,10 @@ const Event = () => {
 
   // Generate certificate with canvas
   const generateCertificate = (student) => {
+    setCertificateReady(false);
     setSelectedStudent(student);
     setCertificateReady(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Download certificate as image
