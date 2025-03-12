@@ -104,7 +104,11 @@ const Event = () => {
       { id: 80, name: 'Shaniba Sherin MK' },
       { id: 81, name: 'Shahma V' },
       { id: 82, name: 'Rishan P' },
-      { id: 83, name: 'Junaid T' }
+      { id: 83, name: 'Junaid T' },
+      { id: 84, name: 'Infanu Rahman K' },
+      { id: 84, name: 'Muhammed Aiman' },
+      { id: 84, name: 'Irshad Ali K' },
+      { id: 84, name: 'Muhammed Adnan Kudukkan' }
     ],
     'biz-quiz': [
       { id: 1, name: 'MUHAMMED RASHID' },
